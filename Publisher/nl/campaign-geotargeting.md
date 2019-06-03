@@ -1,19 +1,19 @@
 # Geotargeting
 
 Geotargeting kan gebruikt worden om klanten uit een speciefieke regio aan te spreken of de inhoud van de mail kan erop aangepast worden. 
-Het doel is om met geotargeting nog meer gericht te mailen. In onze [campagne uitgelicht blog](https://www.copernica.com/nl/blog/post/campagne-uitgelicht-editie-3-geotargetingcampagnes) bespreken we een aantal toepassingen van geotargeting.
-In onderstaand artikel wordt uitgelegd hoe geotargeting mogelijk is in Copernica. 
+Het doel van geotargeting nog gerichter en relevanter te mailen. In onze [campagne uitgelicht blog](https://www.copernica.com/nl/blog/post/campagne-uitgelicht-editie-3-geotargetingcampagnes) bespreken we een aantal toepassingen van geotargeting.
+In onderstaand artikel wordt uitgelegd hoe geotargeting mogelijk is in Copernica.
 
 ## Postcodes
 
-Een van de beste manieren om de locatie van een klant te bepalen is van de postcodes. 
-Deze hebben namelijk een logische structuur om plaatsen te herkennen, via de nummers van een postcode kan je eenvoudig
-de plaats erbij vinden. Postcodes 1000-1100 zijn bijvoorbeeld regio Amsterdam. 
+Een van de beste manieren om de locatie van een klant te bepalen is aan de hand van postcodes. 
+Deze hebben namelijk een logische structuur om plaatsen te herkennen. Via de nummers van een postcode kan je eenvoudig
+de plaats erbij vinden. Postcodes 1000-1100 zijn bijvoorbeeld regio Amsterdam.
 
 
   - Voor geotargeting kunnen we een lijst gebruiken waarbij alle postcodes aan plaatsen en provincies gekoppeld zijn, download deze lijst [hier](../downloads/geotargeting.csv).
- - Vervolgens importeren we deze lijst in een nieuwe database. Deze database noemen we **PlaastenDB**.
- - Gebruik voor de veld namen de namen uit de import. 
+ - Vervolgens importeren we deze lijst in een nieuwe database. Deze database noemen we **PlaatsenDB**.
+ - Gebruik voor de veldnamen de namen uit de import. 
  - Na de import zou de database er als onderstaande moeten uitzien:
  
  ![](../images/PlaatsenDB.png)
@@ -22,7 +22,7 @@ Deze database gaan we straks gebruiken om meer informatie uit de postcodes te ha
 
 ### Selectie op basis van locatie
 
-De meest eenvoudige manier van geotargeting kan dus gedaan worden op postcode. We kunnen met een selectie alle klanten uit een bepaalde regio selecteren door een postcode range op te geven. Dit doen met een zogenoemde [reguliere expressie](https://regex101.com/), hiermee kunnen we een range aangeven waar alle postcode in moeten vallen. Er wordt alleen gekeken naar de cijfers want de letters geven enkel straten aan en geen steden. De reguliere expressie voor amsterdam ziet er als volgt uit:
+De meest eenvoudige manier van geotargeting kan dus gedaan worden op postcode. We kunnen met een selectie alle klanten uit een bepaalde regio selecteren door een postcode range op te geven. Dit doen met een zogenoemde [reguliere expressie](https://regex101.com/), hiermee kunnen we een range aangeven waar alle postcode in moeten vallen. Er wordt alleen gekeken naar de cijfers want de letters geven enkel straten aan en geen steden. De reguliere expressie voor Amsterdam ziet er als volgt uit:
 
 ```
 
